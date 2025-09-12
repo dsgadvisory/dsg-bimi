@@ -1,54 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Systems & Governance Advisory</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #008080, #002b5c);
-      color: white;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background: linear-gradient(to bottom right, #008080, #003366);
       text-align: center;
     }
     header {
-      padding: 60px 20px;
+      padding: 30px 15px 10px 15px;
+    }
+    header img {
+      max-width: 180px;
+      height: auto;
+      margin-bottom: 10px;
     }
     header h1 {
-      font-size: 2.5rem;
-      margin: 0;
+      margin: 10px 0 5px;
+      font-size: 2em;
     }
     header p {
-      font-size: 1.2rem;
-      margin: 10px 0 30px;
+      margin: 0 0 15px;
+      font-size: 1.1em;
     }
     .btn {
-      background: #ffffff;
-      color: #002b5c;
-      padding: 12px 25px;
+      background: #fff;
+      color: #003366;
+      padding: 10px 20px;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
+      display: inline-block;
     }
     section {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
+      margin: 25px 15px;
+    }
+    section h2 {
+      margin-bottom: 8px;
+    }
+    section p, section ul {
+      margin: 5px auto;
+      max-width: 700px;
+      line-height: 1.5;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 4px 0;
+    }
+    .contact-box {
+      background: #fff;
+      color: #003366;
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
     }
     footer {
-      background: #001f3f;
-      padding: 20px;
-      font-size: 0.9rem;
+      margin-top: 30px;
+      padding: 10px;
+      background: #002244;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
-  <div style="text-align:center; margin-top: 20px;">
-  <img src="logo-full.png" alt="DSG Advisory Logo" style="max-width: 300px; height: auto;">
-</div>
   <header>
+    <img src="./logo.png" alt="DSG Advisory Logo">
     <h1>Data Systems & Governance Advisory</h1>
     <p>Responsible Data Systems | Governance | Advisory Services</p>
     <a href="mailto:info@dsgadvisory.org" class="btn">Contact Us</a>
@@ -57,31 +82,30 @@
   <section>
     <h2>About Us</h2>
     <p>
-      DSG Advisory specializes in responsible data systems, data governance, and advisory
-      services to support organizations in managing sensitive data securely and effectively.
+      DSG Advisory specializes in responsible data systems, data governance, and advisory services 
+      to support organizations in managing sensitive data securely and effectively.
     </p>
   </section>
 
   <section>
     <h2>Services</h2>
-    <p>• Data Governance & Compliance<br>
-       • System Design & Advisory<br>
-       • Capacity Building & Training<br>
-       • Data Protection & Risk Assessments</p>
+    <ul>
+      <li>• Data Governance & Compliance</li>
+      <li>• System Design & Advisory</li>
+      <li>• Capacity Building & Training</li>
+      <li>• Data Protection & Risk Assessments</li>
+    </ul>
   </section>
 
   <section>
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:info@dsgadvisory.org">info@dsgadvisory.org</a></p>
+    <div class="contact-box">
+      info@dsgadvisory.org
+    </div>
   </section>
 
   <footer>
-    &copy; <span id="year"></span> Data Systems & Governance Advisory. All rights reserved.
+    © 2025 Data Systems & Governance Advisory. All rights reserved.
   </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
-
