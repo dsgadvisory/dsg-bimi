@@ -1,61 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Data Systems & Governance Advisory</title>
-  <meta name="description" content="DSG Advisory — Ethical, structured, resilient data systems that drive strategic value. Data protection & governance, data & information systems, tools & SOPs, leadership & change enablement.">
+  <meta name="description" content="DSG Advisory — Ethical, structured, resilient data systems that drive strategic value. Data protection & governance, systems, SOPs, leadership & change enablement.">
   <style>
     :root{
-      --bg1:#008080;
-      --bg2:#003a66;
+      /* tuned to the logo gradient (teal → deep blue) */
+      --bg1:#00A7B1;
+      --bg2:#003E73;
       --ink:#ffffff;
-      --ink-muted:#d9e6ee;
-      --brand:#003a66;
+      --ink-muted:#d8eaf2;
+      --brand:#003E73;
       --panel:#ffffff;
       --panel-ink:#0e2a42;
-      --accent:#22c1c3;
-      --max: 960px;
-      --radius: 10px;
-      --shadow: 0 8px 24px rgba(0,0,0,.18);
+      --max: 980px;
+      --radius: 12px;
+      --shadow: 0 8px 28px rgba(0,0,0,.18);
     }
     html,body{
       margin:0;
-      padding:0;
       color:var(--ink);
       background:linear-gradient(160deg,var(--bg1),var(--bg2));
       font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
       line-height:1.55;
       text-rendering:optimizeLegibility;
     }
-    a{ color:var(--ink); }
+    a{ color:inherit; }
     .wrap{ max-width:var(--max); margin:0 auto; padding:0 18px; }
 
     /* Hero */
     .hero{
-      min-height:92vh;          /* cover the page */
+      min-height:92vh;
       display:grid;
       place-items:center;
       text-align:center;
-      padding:32px 0 24px;
+      padding:36px 0 26px;
     }
-    .hero-inner{ margin-top:-6vh; } /* gentle vertical balance */
+    .hero-inner{ margin-top:-5vh; }
     .logo{
-      max-width: 220px;
-      width: 38vw;
+      max-width: 320px;       /* bigger logo */
+      width: 42vw;
       height:auto;
-      margin:0 auto 14px;
+      margin:0 auto 16px;
       display:block;
-      filter: drop-shadow(0 4px 16px rgba(0,0,0,.25));
+      filter: drop-shadow(0 8px 22px rgba(0,0,0,.28));
     }
     h1{
-      margin:.2rem 0 .3rem;
-      font-size: clamp(1.8rem, 2.8vw + 1rem, 2.4rem);
+      margin:.2rem 0 .35rem;
+      font-size: clamp(2rem, 3.2vw + 1rem, 2.6rem);
       font-weight:800;
     }
     .tagline{
       margin:0 0 18px;
-      font-size: clamp(1rem, .6vw + .9rem, 1.15rem);
+      font-size: clamp(1rem, .7vw + .9rem, 1.15rem);
       color:var(--ink-muted);
       letter-spacing:.2px;
     }
@@ -63,20 +62,18 @@
       background:#fff;
       color:var(--brand);
       padding:12px 22px;
-      border-radius:8px;
+      border-radius:10px;
       text-decoration:none;
-      font-weight:700;
+      font-weight:750;
       display:inline-block;
       box-shadow:var(--shadow);
     }
 
     /* Sections */
-    section{
-      padding:48px 0 36px;      /* reduced spacing, still airy */
-    }
+    section{ padding:44px 0 34px; }
     h2{
       margin:0 0 10px;
-      font-size: clamp(1.35rem, .9vw + 1rem, 1.65rem);
+      font-size: clamp(1.35rem, .9vw + 1rem, 1.7rem);
       font-weight:800;
       text-align:center;
     }
@@ -94,14 +91,9 @@
       padding:22px 22px;
       margin:14px 0;
     }
-    .grid{
-      display:grid;
-      gap:16px;
-      grid-template-columns: 1fr;
-    }
+    .grid{ display:grid; gap:16px; grid-template-columns: 1fr; }
     @media (min-width:800px){
       .grid.cols-2{ grid-template-columns: 1fr 1fr; }
-      .grid.cols-3{ grid-template-columns: 1fr 1fr 1fr; }
     }
     .bullets{ margin:0; padding-left:1.05rem; }
     .bullets li{ margin:.35rem 0; }
@@ -114,8 +106,8 @@
       align-items:center;
       gap:10px;
       padding:12px 18px;
-      border-radius:10px;
-      font-weight:700;
+      border-radius:12px;
+      font-weight:750;
       box-shadow:var(--shadow);
     }
     .email-box a{
@@ -123,6 +115,16 @@
       text-decoration:none;
     }
     .center{ text-align:center; }
+
+    .inline{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+    }
+    .li-icon{
+      width:22px; height:22px; display:inline-block;
+      vertical-align:middle;
+    }
 
     footer{
       text-align:center;
@@ -142,7 +144,8 @@
       <img src="./logo.png" alt="DSG Advisory Logo" class="logo">
       <h1>Data Systems &amp; Governance Advisory</h1>
       <p class="tagline">Ethical · Structured · Resilient Data Systems that Drive Strategic Value</p>
-      <a class="btn" href="#contact">Submit a consultation request</a>
+      <!-- Google Form link -->
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeWQkZi7ziwSUhNEC7XronpdDpLz8IKBFQZm8zhqcf8nrGpXQ/viewform?usp=header" target="_blank" rel="noopener">Submit a consultation request</a>
     </div>
   </header>
 
@@ -180,7 +183,7 @@
           <ul class="bullets">
             <li>Big Data &amp; complex datasets</li>
             <li>Forensic &amp; humanitarian data</li>
-            <li>Pharma-grade quality systems</li>
+            <li>Pharma quality systems</li>
           </ul>
         </div>
         <div class="panel">
@@ -194,7 +197,7 @@
         <div class="panel">
           <h3 style="margin:0 0 .35rem">Leadership &amp; Change Enablement</h3>
           <ul class="bullets">
-            <li>Coaching &amp; engagement tools</li>
+            <li>Coaching · Engagement tools</li>
             <li>Organizational dialogue &amp; change strategies</li>
           </ul>
         </div>
@@ -204,9 +207,6 @@
     <!-- VALUE -->
     <section id="value">
       <h2>Business Value We Deliver</h2>
-      <p class="lead">
-        Proper data systems and governance are not just compliance — they are enablers of organizational value. We help organizations:
-      </p>
       <div class="panel">
         <ul class="bullets">
           <li>Unlock insights through analytics for informed decisions</li>
@@ -243,19 +243,27 @@
 
       <!-- Email white box (clickable, labeled Email) -->
       <div class="email-box" style="margin:10px 0 8px;">
-        <span style="opacity:.7">Email:</span>
+        <span style="opacity:.75">Email:</span>
         <a href="mailto:info@dsgadvisory.org">info@dsgadvisory.org</a>
       </div>
 
       <div class="panel" style="margin-top:14px;">
-        <p style="margin:.25rem 0">
-          🌐 LinkedIn: <em>Data Systems &amp; Governance Advisory</em>
+        <!-- LinkedIn with official icon + linked text -->
+        <p class="inline" style="margin:.25rem 0;">
+          <!-- LinkedIn logo (SVG) -->
+          <svg class="li-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#0A66C2" d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/>
+            <path fill="#fff" d="M7.06 20.45H3.56V9h3.5v11.45zM5.31 7.53c-1.13 0-2.04-.9-2.04-2.01 0-1.1.91-2.01 2.04-2.01s2.04.91 2.04 2.01c0 1.11-.91 2.01-2.04 2.01zM20.45 20.45h-3.49v-5.58c0-1.33-.03-3.03-1.85-3.03-1.85 0-2.13 1.44-2.13 2.93v5.68H9.49V9h3.35v1.56h.05c.47-.9 1.62-1.85 3.34-1.85 3.57 0 4.23 2.34 4.23 5.38v6.36z"/>
+          </svg>
+          <a href="https://www.linkedin.com/company/108649298/admin/?lipi=urn%3Ali%3Apage%3Afeed_index_index%3B3534daa8-b22f-4bc5-b0d8-2aef8f065a33"
+             target="_blank" rel="noopener noreferrer">
+            Data Systems &amp; Governance Advisory on LinkedIn
+          </a>
         </p>
-        <p style="margin:.25rem 0">
-          🌍 Languages: Arabic · English · French · Spanish
-        </p>
+
         <p style="margin:.6rem 0 0;">
-          <a class="btn" href="mailto:info@dsgadvisory.org?subject=Consultation%20Request%20-%20DSG%20Advisory&body=Hello%20DSG%20Advisory%2C%0A%0AWe%E2%80%99d%20like%20to%20discuss%20a%20consultation%20about...">Submit a consultation request</a>
+          <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeWQkZi7ziwSUhNEC7XronpdDpLz8IKBFQZm8zhqcf8nrGpXQ/viewform?usp=header"
+             target="_blank" rel="noopener">Submit a consultation request</a>
         </p>
       </div>
     </section>
@@ -266,7 +274,6 @@
   </footer>
 
   <script>
-    // year
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
