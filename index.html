@@ -1,16 +1,293 @@
-<!-- HERO -->
-<header class="hero">
-  <div class="wrap hero-inner">
-    <img src="./logo.png" alt="DSG Advisory Logo" class="logo">
-    <h1>Data Systems &amp; Governance Advisory</h1>
-    <p class="tagline">Ethical · Structured · Resilient Data Systems that Drive Strategic Value</p>
-    
-    <!-- Buttons side by side -->
-    <div style="display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-top:10px;">
-      <a class="btn" href="#who-we-are">Learn more</a>
-      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeWQkZi7ziwSUhNEC7XronpdDpLz8IKBFQZm8zhqcf8nrGpXQ/viewform?usp=header" target="_blank" rel="noopener">
-        Submit a consultation request
-      </a>
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Systems & Governance Advisory</title>
+  <meta name="description" content="DSG Advisory — Ethical, structured, resilient data systems that drive strategic value. Data protection & governance, data & information systems, tools & SOPs, leadership & change enablement.">
+  <style>
+    :root{
+      /* Exact logo gradient colors */
+      --bg1:#009FAF;   /* teal */
+      --bg2:#00447C;   /* deep navy */
+      --ink:#ffffff;
+      --ink-muted:#d8eaf2;
+      --brand:#00447C;
+      --panel:#ffffff;
+      --panel-ink:#0e2a42;
+      --max: 980px;
+      --radius: 12px;
+      --shadow: 0 8px 28px rgba(0,0,0,.18);
+    }
+    html,body{
+      margin:0;
+      color:var(--ink);
+      background:linear-gradient(160deg,var(--bg1),var(--bg2));
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      line-height:1.55;
+      text-rendering:optimizeLegibility;
+      scroll-behavior: smooth; /* built-in smooth scrolling */
+    }
+    a{ color:inherit; }
+    .wrap{ max-width:var(--max); margin:0 auto; padding:0 18px; }
+
+    /* Hero */
+    .hero{
+      min-height:92vh;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      padding:36px 0 26px;
+    }
+    .hero-inner{ margin-top:-5vh; }
+    .logo{
+      max-width: 320px;       /* bigger logo */
+      width: 42vw;
+      height:auto;
+      margin:0 auto 16px;
+      display:block;
+      filter: drop-shadow(0 8px 22px rgba(0,0,0,.28));
+    }
+    h1{
+      margin:.2rem 0 .35rem;
+      font-size: clamp(2rem, 3.2vw + 1rem, 2.6rem);
+      font-weight:800;
+    }
+    .tagline{
+      margin:0 0 18px;
+      font-size: clamp(1rem, .7vw + .9rem, 1.15rem);
+      color:var(--ink-muted);
+      letter-spacing:.2px;
+    }
+    .btn{
+      background:#fff;
+      color:var(--brand);
+      padding:12px 22px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:750;
+      display:inline-block;
+      box-shadow:var(--shadow);
+    }
+
+    /* Sections */
+    section{ padding:44px 0 34px; }
+    h2{
+      margin:0 0 10px;
+      font-size: clamp(1.35rem, .9vw + 1rem, 1.7rem);
+      font-weight:800;
+      text-align:center;
+    }
+    .lead{
+      margin:0 auto 12px;
+      max-width:var(--max);
+      text-align:center;
+      color:var(--ink-muted);
+    }
+    .panel{
+      background:var(--panel);
+      color:var(--panel-ink);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:22px 22px;
+      margin:14px 0;
+    }
+    .grid{ display:grid; gap:16px; grid-template-columns: 1fr; }
+    @media (min-width:800px){
+      .grid.cols-2{ grid-template-columns: 1fr 1fr; }
+    }
+    .bullets{ margin:0; padding-left:1.05rem; }
+    .bullets li{ margin:.35rem 0; }
+
+    /* Email box */
+    .email-box{
+      background:var(--panel);
+      color:var(--panel-ink);
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 18px;
+      border-radius:12px;
+      font-weight:750;
+      box-shadow:var(--shadow);
+    }
+    .email-box a{
+      color:var(--brand);
+      text-decoration:none;
+    }
+    .center{ text-align:center; }
+
+    .inline{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+    }
+    .li-icon{
+      width:22px; height:22px; display:inline-block;
+      vertical-align:middle;
+    }
+
+    footer{
+      text-align:center;
+      padding:16px 10px 26px;
+      color:var(--ink-muted);
+      font-size:.92rem;
+      border-top:1px solid rgba(255,255,255,.12);
+      margin-top:22px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <img src="./logo.png" alt="DSG Advisory Logo" class="logo">
+      <h1>Data Systems &amp; Governance Advisory</h1>
+      <p class="tagline">Ethical · Structured · Resilient Data Systems that Drive Strategic Value</p>
+      
+      <!-- Buttons side by side -->
+      <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+        <a class="btn" href="#who-we-are">Learn more</a>
+        <a class="btn" 
+           href="https://docs.google.com/forms/d/e/1FAIpQLSeWQkZi7ziwSUhNEC7XronpdDpLz8IKBFQZm8zhqcf8nrGpXQ/viewform?usp=header" 
+           target="_blank" rel="noopener">Submit a consultation request</a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
+
+  <main class="wrap">
+    <!-- WHO WE ARE -->
+    <section id="who-we-are">
+      <h2>Who We Are</h2>
+      <div class="panel">
+        <p>
+          DSG Advisory helps organizations move from fragmented data practices to structured, ethical, and resilient
+          data &amp; information management systems — protecting data integrity, preserving institutional memory, and
+          building trust with stakeholders.
+        </p>
+        <p style="margin-bottom:0">
+          We operate as a boutique consultancy with a flexible network of experts, combining technical know-how with
+          leadership experience.
+        </p>
+      </div>
+    </section>
+
+    <!-- OUR SERVICES -->
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="grid cols-2">
+        <div class="panel">
+          <h3 style="margin:0 0 .35rem">Data Protection &amp; Governance</h3>
+          <ul class="bullets">
+            <li>GDPR compliance</li>
+            <li>Certified Data Protection Officer expertise</li>
+            <li>Data security policies</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3 style="margin:0 0 .35rem">Data &amp; Information Management Systems</h3>
+          <ul class="bullets">
+            <li>Big Data &amp; complex datasets</li>
+            <li>Forensic &amp; humanitarian data</li>
+            <li>Pharma quality systems</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3 style="margin:0 0 .35rem">Tools Deployment &amp; SOPs</h3>
+          <ul class="bullets">
+            <li>Lean, field-ready tools</li>
+            <li>SOP drafting</li>
+            <li>Practical process frameworks</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3 style="margin:0 0 .35rem">Leadership &amp; Change Enablement</h3>
+          <ul class="bullets">
+            <li>Coaching · Engagement tools</li>
+            <li>Organizational dialogue &amp; change strategies</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUSINESS VALUE -->
+    <section id="value">
+      <h2>Business Value We Deliver</h2>
+      <p class="lead">
+        Proper data systems and governance are not just compliance — they are enablers of organizational value.
+        We help organizations:
+      </p>
+      <div class="panel">
+        <ul class="bullets">
+          <li>Unlock insights through analytics for informed decisions</li>
+          <li>Strengthen accountability &amp; transparency with donors and stakeholders</li>
+          <li>Preserve institutional memory and reduce loss of knowledge</li>
+          <li>Enhance efficiency &amp; resilience to adapt in crises or transitions</li>
+          <li>Build trust through ethical data stewardship</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- WHO WE SUPPORT / ENGAGEMENT FORMATS -->
+    <section id="audiences">
+      <div class="grid cols-2">
+        <div class="panel">
+          <h3 style="margin:0 0 .35rem">Who We Support</h3>
+          <p style="margin:0">
+            NGOs · National Commissions · UN Agencies · Healthcare &amp; Pharma · Humanitarian Actors · Life Sciences
+          </p>
+        </div>
+        <div class="panel">
+          <h3 style="margin:0 0 .35rem">Engagement Formats</h3>
+          <p style="margin:0">
+            From 2-hour audits to multi-month system roadmaps, our services are designed as short, high-impact
+            engagements — ideal for organizations seeking actionable improvements without full-time commitments.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="center">
+      <h2>Contact</h2>
+
+      <!-- Email white box -->
+      <div class="email-box" style="margin:10px 0 8px;">
+        <span style="opacity:.75">Email:</span>
+        <a href="mailto:info@dsgadvisory.org">info@dsgadvisory.org</a>
+      </div>
+
+      <div class="panel" style="margin-top:14px;">
+        <!-- LinkedIn -->
+        <p class="inline" style="margin:.25rem 0;">
+          <svg class="li-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#0A66C2" d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/>
+            <path fill="#fff" d="M7.06 20.45H3.56V9h3.5v11.45zM5.31 7.53c-1.13 0-2.04-.9-2.04-2.01 0-1.1.91-2.01 2.04-2.01s2.04.91 2.04 2.01c0 1.11-.91 2.01-2.04 2.01zM20.45 20.45h-3.49v-5.58c0-1.33-.03-3.03-1.85-3.03-1.85 0-2.13 1.44-2.13 2.93v5.68H9.49V9h3.35v1.56h.05c.47-.9 1.62-1.85 3.34-1.85 3.57 0 4.23 2.34 4.23 5.38v6.36z"/>
+          </svg>
+          <a href="https://www.linkedin.com/company/data-systems-governance" target="_blank" rel="noopener noreferrer">
+            Data Systems &amp; Governance Advisory on LinkedIn
+          </a>
+        </p>
+
+        <p style="margin:.25rem 0">
+          🌍 Languages: Arabic · English · French · Spanish
+        </p>
+
+        <p style="margin:.6rem 0 0;">
+          <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeWQkZi7ziwSUhNEC7XronpdDpLz8IKBFQZm8zhqcf8nrGpXQ/viewform?usp=header"
+             target="_blank" rel="noopener">Submit a consultation request</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Data Systems &amp; Governance Advisory. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
